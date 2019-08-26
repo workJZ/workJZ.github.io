@@ -1,4 +1,4 @@
-var peymane=1000; //peymane
+var peymane=10007; //peymane
 var meqdare_avaliye =0; //adad 
 var faceColor = 'rgb(225,225,225)';
 var numberColor = "black";
@@ -6,7 +6,7 @@ var innerCycle = 'gray';
 var outerCycle = 'black';
 var i=0;
 var cycle =0;
-var mode= 100;
+var mode= 1000;
 var end =meqdare_avaliye%peymane;
 
 var canvas = document.getElementById("canvas");
