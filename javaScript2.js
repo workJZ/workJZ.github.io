@@ -1,4 +1,4 @@
-var peymane=10007; //peymane
+var peymane=1000007; //peymane
 var meqdare_avaliye =0; //adad 
 var faceColor = 'rgb(225,225,225)';
 var numberColor = "black";
@@ -6,7 +6,7 @@ var innerCycle = 'gray';
 var outerCycle = 'black';
 var i=0;
 var cycle =0;
-var mode= 1000;
+var mode= 71429;
 var end =meqdare_avaliye%peymane;
 
 var canvas = document.getElementById("canvas");
@@ -14,13 +14,13 @@ var ctx = canvas.getContext("2d");
 var radius = canvas.height / 2;
 ctx.translate(radius, radius);
 radius = radius * 0.90
-setInterval(drawClock, 100);
+setInterval(drawClock, 1);
 
 function Enter(){
 var tavan  =document.getElementById("adad").value;
 end = f(end,tavan)%peymane;
 // meqdare_avaliye = Math.pow(meqdare_avaliye, tavan);
-setInterval(drawClock, 100);
+setInterval(drawClock, 1);
 drawClock();
 //cycle = (secondNumber / number)|0 ;
 }
@@ -98,7 +98,7 @@ ctx.rotate(-ang);
 
 function drawTime(ctx, radius){
   if(end<meqdare_avaliye){
-    i-=0.05;
+    i-=10;
     if(i<= (end)*(2*Math.PI/peymane)){
       i= (end)*(2*Math.PI/peymane);
       document.getElementById('num').innerHTML=end;
@@ -107,7 +107,7 @@ function drawTime(ctx, radius){
     drawHand(ctx, i, radius*0.8, radius*0.07);
   }
   else{
-    i+=0.05; 
+    i+=10; 
     if(i>= (end)*(2*Math.PI/peymane)){
     i= (end)*(2*Math.PI/peymane);
     document.getElementById('num').innerHTML=end;
